@@ -1,7 +1,8 @@
 '''
 OCRNote - OCR Screen Capture and Text Recognition Tool
 
-This script creates a graphical user interface (GUI) application for capturing screen regions and recognizing text within those regions using Optical Character Recognition (OCR). 
+This script creates a graphical user interface (GUI) application for capturing screen 
+regions and recognizing text within those regions using Optical Character Recognition (OCR). 
 This tool can be useful for online learning to convert screenshots to texts for notes.
 
 Usage:
