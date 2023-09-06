@@ -1,16 +1,20 @@
 '''
 OCRNote - OCR Screen Capture and Text Recognition Tool
 
-This script creates a graphical user interface (GUI) application for capturing screen 
-regions and recognizing text within those regions using Optical Character Recognition (OCR). 
-This tool can be useful for online learning to convert screenshots to texts for notes.
+This script creates a graphical user interface (GUI) application
+for capturing screen regions and recognizing text within those
+regions using Optical Character Recognition (OCR).
+This tool can be useful for online learning to convert screenshots
+to texts for notes.
 
 Usage:
     - Run this script to open the OCR tool.
-    - Click "Recognize Text" and drag the mouse to select a region on the screen.
+    - Click "Recognize Text" and drag the mouse to select a region
+     on the screen.
     - Release the mouse button to capture the selected region.
     - Recognized text is displayed in the main window's text box.
-    - You can copy the recognized text to the clipboard and clear the text box.
+    - You can copy the recognized text to the clipboard and clear
+    the text box.
 
 Dependencies:
     - tkinter: For creating the GUI.
@@ -77,7 +81,8 @@ class OCRNote:
     def recognize_text(self):
         self.create_gray_layer()
 
-    # Start selection of the region, and mouse click event updates the starting coordinates
+    # Start selection of the region, and mouse click event updates
+    # the starting coordinates
     def start_selection(self, event):
         self.start_x = event.x
         self.start_y = event.y
@@ -91,7 +96,8 @@ class OCRNote:
         self.canvas.coords(self.rectangle, self.start_x,
                            self.start_y, event.x, event.y)
 
-    # End selection of the region, and mouse release event updates the ending coordinates
+    # End selection of the region, and mouse release event updates
+    # the ending coordinates
     def end_selection(self, event):
         self.root.deiconify()
 
@@ -129,7 +135,8 @@ class OCRNote:
         # Append the text into the text box
         self.text_box.insert(tk.END, text)
 
-    # Create a gray layer to cover the screen to inform the user to select a region
+    # Create a gray layer to cover the screen to inform the user
+    # to select a region
     def create_gray_layer(self):
         self.root.withdraw()
 
